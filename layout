@@ -1,0 +1,26 @@
+MEMORY
+{
+	NES2HDR:   start =     0, size =    $10, fill=yes, fillval=$00;
+	NSMMAIN:   start = $6000, size =  $8000, fill=yes, fillval=$FF;
+	NSMDATA2:  start = $C470, size =  $0E00, fill=yes, fillval=$FF;
+	NSMDATA3:  start = $C5D0, size =  $0D12, fill=yes, fillval=$FF;
+	BANK4PAD:  start =     0, size =  $04EE, fill=yes, fillval=$FF;
+	NSMDATA4:  start = $C296, size =  $0DF0, fill=yes, fillval=$FF;
+	NSMCHAR2:  start = $0760, size =  $0460, fill=yes, fillval=$FF;
+	BANK5PAD:  start =     0, size =  $0DB0, fill=yes, fillval=$FF;
+	NSMCHAR1:  start =     0, size =  $2000, fill=yes, fillval=$FF;
+	FDSBIOS:   start = $E000, size =  $2000, fill=yes, fillval=$FF;
+
+}
+
+SEGMENTS
+{
+	NES2HDR:   load = NES2HDR,  type = ro;
+	NSMMAIN:   load = NSMMAIN,  type = ro;
+	NSMDATA2:  load = NSMDATA2, type = ro;
+	NSMDATA3:  load = NSMDATA3, type = ro;
+	NSMDATA4:  load = NSMDATA4, type = ro;
+	NSMCHAR2:  load = NSMCHAR2, type = ro;
+	NSMCHAR1:  load = NSMCHAR1, type = ro;
+	FDSBIOS:   load = FDSBIOS,  type = ro;
+}
